@@ -1,0 +1,29 @@
+<template>
+	<lightning-card title="Enter New Flight">
+		<lightning-combobox
+			class="slds-p-horizontal--small"
+			data-name="departure"
+			label="Departure"
+			placeholder="Select IATA Code"
+			options={airportOptions}
+			onchange={handleAirportChange}
+		></lightning-combobox>
+
+		<lightning-combobox
+			class="slds-p-horizontal--small"
+			data-name="arrival"
+			label="Arrival"
+			placeholder="Select IATA Code"
+			options={airportOptions}
+			onchange={handleAirportChange}
+		></lightning-combobox>
+
+		<lightning-button
+			class="slds-p-around--small"
+			variant="brand"
+			label="Save"
+			onclick={saveFlight}
+			disabled={isSaveButtonDisabled}
+		></lightning-button>
+	</lightning-card>
+</template>
